@@ -26,3 +26,22 @@ img {
     padding: 8px;
     font-style: italic;
 }
+
+td.value {
+    text-align: right;
+}
+
+span.timespan {
+    color: #adadad;
+    font-style: italic;
+    font-size: .9em;
+}
+
+h4.position {
+    display: inline-block;
+}
+
+img.logo {
+    /* max-width: 150px; */
+    float: right;
+}
