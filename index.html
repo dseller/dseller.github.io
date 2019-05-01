@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+        <link rel="stylesheet" type="text/css" href="css/skeleton.css" />
+        <link rel="stylesheet" type="text/css" href="css/site.css" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/default.min.css">
+    </head>
+
+    <body>
+        <div class="container" id="app">
+            <div class="section header">
+                <div class="row">
+                    <h1>0x1BADB002</h1>
+                    <!-- <p>My general development blog... might contain extremely complex material.</p> -->
+
+                    <router-link exact class="button" to="/">Blogs</router-link>
+                    <router-link exact class="button" to="/about">About me</router-link>
+
+                </div>
+            </div>
+
+            <router-view></router-view>
+        </div>
+
+        <script type="text/javascript" src="site.js"></script>
+    </body>
+</html>
