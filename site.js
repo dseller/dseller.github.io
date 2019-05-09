@@ -82,8 +82,8 @@ Vue.component('blog-fragment', {
 });
 
 const Blog = Vue.component('blog', {
-    props: ['item'],
-    template: `<div><hr/><div class="row">
+    props: ['item', 'first'],
+    template: `<div><hr v-if="!first"/><div class="row">
         <div class="nine columns">
             <h4 v-if="item.slug"><router-link exact v-bind:to="'/blog/' + item.slug">{{ item.title }}</router-link></h4>
             <h4 v-else>{{ item.title }}</h4>
@@ -102,7 +102,7 @@ const BlogPage = Vue.component('blog-page', {
         }
     },
     template: `<div>
-        <blog v-if="blog" v-bind:item="blog" />
+        <blog v-if="blog" v-bind:item="blog" v-bind:first="true" />
         <div v-else>
             <h4>Blog not found</h4>
             <p>The requested blog could not be found.</p>
@@ -125,7 +125,7 @@ const Blogs = Vue.component('blogs', {
         }
     },
     template: `<ul>
-        <blog v-for="blog of blogs" v-bind:key="blog.publishDate" v-bind:item="blog" />
+        <blog v-for="(blog, index) of blogs" v-bind:key="blog.publishDate" v-bind:item="blog" v-bind:first="index === 0" />
     </ul>`,
     mounted: function() {
         const self = this;
