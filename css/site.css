@@ -2,7 +2,7 @@
     padding: 4rem 0;
 }
 
-.router-link-active {
+.router-link-active.button {
     color: #fff;
     background-color: #33C3F0;
     border-color: #33C3F0;

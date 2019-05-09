@@ -1,5 +1,6 @@
 [{
     "title": "Actor-based programming language \"X\"",
+    "slug": "actor-based-programming-language-x",
     "publishedDate": "Tuesday, October 9, 2018",
     "content": [
         "Though there have been no blog posts on the actual development on ttOS, I have been doing some off-and-on work on it. There have been too many changes for me to write them all down, but I can show you this screenshot of the \"changelog\" output:",
@@ -19,6 +20,7 @@
     ]
 }, {
     "title": "COMBOOT Serial boot loader",
+    "slug": "comboot-serial-boot-loader",
     "publishedDate": "Thursday, June 8, 2017",
     "content": [
         "Contrary to what you might believe from the scarcity of updates on my blog, I have been avidly working on my operating system. I added a bytecode interpreter/VM to it so it will host completely sandboxed executables. But, I will write a separate blog post on that subject later.",
@@ -30,6 +32,7 @@
     ]
 }, {
     "title": "ttOS R0.3",
+    "slug": "ttos-r0.3",
     "publishedDate": "Monday, May 16, 2016",
     "content": [
         "I decided that it's time for the R0.3 release. I don't feel like writing a very lengthy post today, but I want to highlight some things.",
@@ -58,6 +61,7 @@
     ]
 }, {
     "title": "vhdutil - VHD file attach/detach tool",
+    "slug": "vhdutil-vhd-file-attach-detach-tool",
     "publishedDate": "Saturday, May 7, 2016",
     "content": [
         "I just published a small tool to my Github account. While developing ttOS, I have been struggling to find a virtual hard disk format that:",
@@ -73,6 +77,7 @@
     ]
 }, {
     "title": "ttOS R0.2",
+    "slug": "ttos-r0.2",
     "publishedDate": "Wednesday, April 27, 2016",
     "content": [
         "The first blogpost since a month! And I have a lot to show (I think). First, a quick round-up of the latest modifications:",
@@ -112,6 +117,7 @@
     ]
 },{
     "title": "Switching to real mode to use BIOS functions",
+    "slug": "switching-real-mode-bios-functions",
     "publishedDate": "Tuesday, March 22, 2016",
     "content": [
         "Well, I finally did it. It took me exactly two days (or 16 hours) to write a piece of code that would allow me to temporarily drop back to real mode, call some BIOS interrupts, and then go back to protected mode again. The fact that I use MSVC++ and the COFF object file format didn't actually help me, as I had to be quite inventive to work around the limitations of the COFF format.",
@@ -121,6 +127,7 @@
     ]
 }, {
     "title": "Syntactic sugar with C++ and more",
+    "slug": "syntactic-sugar-with-cpp-and-more",
     "publishedDate": "Thursday, March 17, 2016",
     "content": [
         "So in my previous blogpost I briefly spoke about switching to C++ from pure C. I really like it so far. Since the majority of code I write at work is C#, I've become very accustomed to object oriented thinking.",
@@ -153,6 +160,7 @@
     ]
 }, {
     "title": "OS: Switch to C++",
+    "slug": "os-switch-to-cpp",
     "publishedDate": "Sunday, February 28, 2016",
     "content": [
         "So yeah, it has been a while since the last update. I don't feel like writing a lengthy post like last time, so I'm just going to list the progress since the last post (on January 27th!).",
@@ -172,6 +180,7 @@
     ]
 },{
     "title": "A tale about storage devices & terminals",
+    "slug": "a-tale-about-storage-devices-terminals",
     "publishedDate": "Wednesday, January 27, 2016",
     "content": [
         "A lot has happened to ttOS since my last blogpost. If my memory serves me right, my previous blogpost contains information about programming the PIT. I will focus on a few key subsystems which have been worked on.",
@@ -218,6 +227,7 @@
     ]
 },{
     "title": "Update on O/S development",
+    "slug": "update-on-os-development",
     "publishedDate": "Saturday, January 16, 2016",
     "content": [
         "Finally, a new blogpost about the original purpose of this blog; operating system development.",
@@ -232,6 +242,7 @@
     ]
 },{
     "title": ".NET Collections & deferred execution with IQueryable",
+    "slug": "net-collections-deferred-execution-iqueryable",
     "publishedDate": "Thursday, June 11, 2015",
     "content": [
         "One of the advantages of modern programming languages and frameworks is that they provide a lot of functionality to \"make it easier\" for developers to build their software. However, in most cases it is still very important to know what happens under the hood. For example, it will be easier for a developer to analyse the impact of changes, anticipate on how 3rd party libraries might work, or optimize their code properly.",
@@ -283,6 +294,7 @@
     ]
 },{
     "title": "Quick update",
+    "slug": "quick-update",
     "publishedDate": "Thursday, February 19, 2015",
     "content": [
         "Small update using the Blogger app for Android. I made a Git branch for development of a Linux build. The JIT compiler is now buildable in Debian 6, and runs like a charm! Yay!",
@@ -291,6 +303,7 @@
     ]
 }, {
     "title": "Relocation part II & general improvements",
+    "slug": "relocation-part-ii-general-improvements",
     "publishedDate": "Saturday, November 8, 2014",
     "content": [
         "I have split the code and data memory areas now. The relocation table has allowed me to do this without any real problems. It's nice!",
@@ -301,6 +314,7 @@
     ]
 },{
     "title": "Relocation part I",
+    "slug": "relocation-part-i",
     "publishedDate": "Wednesday, November 5, 2014",
     "content": [
         { "image": "/images/relocation.png" },
@@ -313,6 +327,7 @@
     ]
 }, {
    "title": "The multi-dimensional translation table",
+   "slug": "the-multi-dimensional-translation-table",
    "publishedDate": "Saturday, November 1, 2014",
    "content": [
        "One of the biggest hurdles in this project has been the mechanics of translating Pessego-bytecode to x86 machine code (of course, it's a JIT!). I took 3 different approaches;",
@@ -330,6 +345,7 @@
    ]
 },{ 
     "title": "My JIT compiler",
+    "slug": "my-jit-compiler",
     "publishedDate": "Tuesday, October 28, 2014",
     "content": [
         "Been a long time since the last update. I also suspended development of my operating system and moved on to enhancing my virtual machine project called \"Pessego\". I wrote the software back in 2008 or something and was a glorified bytecode interpreter with crappy assembler.",
@@ -341,6 +357,7 @@
     ]
 },{
     "title": "The GDT & IDT",
+    "slug": "the-gdt-idt",
     "publishedDate": "Wednesday, July 2, 2014",
     "content": [
         "It turns out the reason why my kernel would not boot had nothing to do with my amd64 architecture! The linker script was not properly written so the multiboot header was not in the right place!",
@@ -352,6 +369,7 @@
     ]
 },{
     "title": "Setting up the system",
+    "slug": "setting-up-the-system",
     "publishedDate": "Monday, June 30, 2014",
     "content": [
         "Well, hello there! Welcome to my blog. I will use this blog as some kind of journal to follow my progress in building my own kernel/OS.",

@@ -18,7 +18,6 @@ Vue.component('code-fragment', {
     template: '<pre><code>{{ code }}</code></pre>',
     mounted: function() {
         const self = this;
-        console.log(self);
         fetch(self.file).then(function (response) {
             if (response.status === 404) {
                 self.code = 'ERROR: File ' + self.file + ' not found...';
@@ -28,7 +27,6 @@ Vue.component('code-fragment', {
 
                     setTimeout(function() {
                         var block = self.$el.querySelector('pre code');
-                        console.log(block);
                         hljs.highlightBlock(block);
                     }, 500);
                 });
@@ -86,12 +84,38 @@ Vue.component('blog-fragment', {
 const Blog = Vue.component('blog', {
     props: ['item'],
     template: `<div><hr/><div class="row">
-        <div class="nine columns"><h4>{{ item.title }}</h4></div>
+        <div class="nine columns">
+            <h4 v-if="item.slug"><router-link exact v-bind:to="'/blog/' + item.slug">{{ item.title }}</router-link></h4>
+            <h4 v-else>{{ item.title }}</h4>
+        </div>
         <div class="three columns publish-date"><i>{{ item.publishedDate }}</i></div>
     </div>
     <div class="row">
         <blog-fragment v-for="(fragment, index) of item.content" v-bind:content="fragment" v-bind:key="index" />
     </div></div>`
+});
+
+const BlogPage = Vue.component('blog-page', {
+    data: function() {
+        return {
+            blog: null
+        }
+    },
+    template: `<div>
+        <blog v-if="blog" v-bind:item="blog" />
+        <div v-else>
+            <h4>Blog not found</h4>
+            <p>The requested blog could not be found.</p>
+        </div>
+    </div>`,
+    mounted: function() {
+        const self = this;
+        fetch('data/blogs.json').then(function (response) {
+            response.json().then(function (blogs) {
+                self.blog = blogs.find(item => item.slug === self.$route.params.slug);
+            });
+        });
+    }
 });
 
 const Blogs = Vue.component('blogs', {
@@ -272,6 +296,9 @@ const About = Vue.component('about', {
 const routes = [{
     path: '/',
     component: Blogs
+}, {
+    path: '/blog/:slug',
+    component: BlogPage
 }, {
     path: '/about',
     component: About
